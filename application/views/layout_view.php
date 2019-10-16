@@ -90,10 +90,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>A.T.I - ADMINISTRACI&Oacute;N DE TURNOS INTELIGENTE</h1>
     <h1 style="text-align: center">Bienvenido de nuevo <?=$this->session->userdata('perfil')?></h1>
     <div id="encabezado">
+        Usuario: <?=$this->session->userdata('apellido')?>, <?=$this->session->userdata('nombre')?>
         <?php
-        foreach($us as $fila){
-            echo 'USUARIO: '.$fila->nombre.' '.$fila->apellido;
-        }
+     /*   if(isset($us)){
+            foreach($us as $fila){
+                echo 'USUARIO: '.$fila->nombre.' '.$fila->apellido;
+            }
+        }*/
         ?>
     </div>
     <div class="menu">

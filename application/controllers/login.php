@@ -60,10 +60,12 @@ class Login extends MY_Controller
             if($check_user == TRUE)
             {
                  $data = array(
-                   'is_logued_in' => TRUE,
-                   'id_usuario' => $check_user->id,
-                   'perfil' => $check_user->perfil,
-                   'username' => $check_user->username
+                    'is_logued_in' => TRUE,
+                    'id_usuario' => $check_user->id,
+                    'perfil' => $check_user->perfil,
+                    'username' => $check_user->username,
+                    'nombre' => $check_user->nombre,
+                    'apellido' => $check_user->apellido
                  );
                 $this->session->set_userdata($data);
                 $this->index();
